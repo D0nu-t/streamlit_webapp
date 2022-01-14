@@ -43,7 +43,7 @@ def preprocess_tweet(tweet):
 def get_tweets(topic, tweet_count):
   tweets = list()
   try:
-    matched_tweets = api.search_tweets(q = topic, lang='en', show_user = False, count = tweet_count)
+    matched_tweets = api.search_tweets(q = topic, lang='en',count = tweet_count)
     for tweet in matched_tweets:
       parsed_tweet = {}
       parsed_tweet['text'] = preprocess_tweet(tweet.text)
